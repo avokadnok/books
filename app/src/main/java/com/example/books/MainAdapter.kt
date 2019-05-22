@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.activity_book.view.*
 
-class MainAdapter: RecyclerView.Adapter<CustomViewHolder>(){
-
-    val bookNames = listOf("first","second","third","4rd","5rd","6rd","7","8")
+class MainAdapter(
+    private val bookNames: List<String>
+): RecyclerView.Adapter<CustomViewHolder>(){
 
     //numberOfItems
     override fun getItemCount(): Int {

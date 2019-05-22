@@ -12,21 +12,16 @@ class AddBookActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_book)
-        /*var book = Book(editText_add_author.text.toString(), editText_add_book.text.toString())
-        val context = this
-        var db = DataBaseHandler(context)
-        db.insertData(book)*/
+        var db = DataBaseHandler(this)
 
-       /* val context = this
-        button_add_new_book.setOnClickListener(){
+        button_add_new_book.setOnClickListener {
             if (editText_add_author.text.toString().isNotEmpty() && editText_add_book.text.toString().isNotEmpty()) {
                 var book = Book(editText_add_author.text.toString(), editText_add_book.text.toString())
-                var db = DataBaseHandler(context)
                 db.insertData(book)
             } else {
-                Toast.makeText(context, "Please fill All Data's", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please fill All Data's", Toast.LENGTH_SHORT).show()
             }
-        }*/
+        }
     }
 
     fun cancelAddBook(view: View){
